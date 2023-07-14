@@ -3,6 +3,8 @@ package com.john.webshop.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,6 +15,13 @@ import lombok.NoArgsConstructor;
 @Entity
 public class OrderLine {
     @Id
-    private String productId;
+    private Integer orderLineId;
+
+//    @OneToOne()
+//    private Product product;
+
     private int quantity;
+
+//    @ManyToOne
+//    private Order order;
 }
